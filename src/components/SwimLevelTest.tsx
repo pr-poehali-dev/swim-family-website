@@ -301,9 +301,12 @@ export default function SwimLevelTest() {
                 <Button
                   size="lg"
                   className="flex-1 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all py-6 text-lg"
+                  asChild
                 >
-                  <Icon name="Phone" className="mr-2" size={20} />
-                  Записаться на занятие
+                  <a href="tel:+79169455813">
+                    <Icon name="Phone" className="mr-2" size={20} />
+                    Записаться на занятие
+                  </a>
                 </Button>
                 <Button
                   size="lg"

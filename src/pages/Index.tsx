@@ -88,19 +88,15 @@ const Index = () => {
     <div className="min-h-screen">
       <section 
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `url('https://cdn.poehali.dev/projects/2b714740-d40e-4ef4-b8ae-4db5d5a39d93/files/b4a07ed4-f3f3-4861-97e1-a969684f7524.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'brightness(0.7)' }}
-        >
-          <source src="https://cdn.poehali.dev/projects/2b714740-d40e-4ef4-b8ae-4db5d5a39d93/files/water-bg.mp4" type="video/mp4" />
-        </video>
-        
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-primary/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/30 to-background/90" />
+
         
         <div className="relative z-10 container mx-auto px-4 py-20 text-center">
           <div className="animate-fade-in">
@@ -123,19 +119,20 @@ const Index = () => {
               </div>
             </div>
             
-            <Button 
-              size="lg" 
-              className="text-lg md:text-xl px-8 md:px-10 py-6 md:py-8 bg-white text-primary hover:bg-white/95 hover:scale-110 transition-all duration-300 shadow-2xl group relative overflow-hidden"
-            >
-              <span className="relative z-10">
-                ЗАПИСАТЬСЯ НА БЕСПЛАТНОЕ ПРОБНОЕ ЗАНЯТИЕ
-              </span>
-              <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="absolute inset-0 animate-ripple-wave bg-primary/20 rounded-full" />
-              </span>
-            </Button>
-            
-            <p className="text-white/95 mt-4 text-base md:text-lg drop-shadow-lg">+ Диагностика вашего уровня!</p>
+            <a href="#test">
+              <Button 
+                size="lg" 
+                className="text-lg md:text-xl px-8 md:px-10 py-6 md:py-8 bg-white text-primary hover:bg-white/95 hover:scale-110 transition-all duration-300 shadow-2xl group relative overflow-hidden"
+              >
+                <span className="relative z-10">
+                  <Icon name="Target" className="inline mr-2" size={24} />
+                  ДИАГНОСТИКА ВАШЕГО УРОВНЯ!
+                </span>
+                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="absolute inset-0 animate-ripple-wave bg-primary/20 rounded-full" />
+                </span>
+              </Button>
+            </a>
           </div>
         </div>
 
@@ -149,10 +146,12 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12 overflow-hidden">
-            <div className="inline-block bg-gradient-to-r from-destructive via-destructive/90 to-destructive text-white px-8 py-3 text-lg font-bold shadow-lg hover:shadow-xl transition-shadow cursor-pointer animate-pulse-slow">
-              <Icon name="CalendarDays" className="inline mr-2" size={20} />
-              ИДЕТ НАБОР НА НОЯБРЬ — СПЕШИТЕ, МЕСТА ОГРАНИЧЕНЫ!
-            </div>
+            <a href="#pricing">
+              <div className="inline-block bg-gradient-to-r from-destructive via-destructive/90 to-destructive text-white px-8 py-3 text-lg font-bold shadow-lg hover:shadow-xl transition-shadow cursor-pointer animate-pulse-slow hover:scale-105">
+                <Icon name="CalendarDays" className="inline mr-2" size={20} />
+                ИДЕТ НАБОР НА НОЯБРЬ — СПЕШИТЕ, МЕСТА ОГРАНИЧЕНЫ!
+              </div>
+            </a>
           </div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
@@ -263,13 +262,13 @@ const Index = () => {
             ))}
           </div>
           
-          <div className="mt-12">
+          <div id="test" className="mt-12 scroll-mt-20">
             <SwimLevelTest />
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
+      <section id="pricing" className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_hsl(199,89%,48%)_0%,_transparent_50%)]" />
         </div>
@@ -289,9 +288,9 @@ const Index = () => {
                 key={tab.key}
                 onClick={() => setSelectedAudience(tab.key as typeof selectedAudience)}
                 variant={selectedAudience === tab.key ? 'default' : 'outline'}
-                className={`px-4 md:px-6 py-4 md:py-6 text-sm md:text-base transition-all duration-300 ${
+                className={`px-4 md:px-6 py-4 md:py-6 text-sm md:text-base transition-all duration-500 ${
                   selectedAudience === tab.key
-                    ? 'bg-primary text-white shadow-xl scale-105'
+                    ? 'bg-primary text-white shadow-xl scale-105 animate-water-ripple'
                     : 'hover:scale-105 border-primary/30'
                 }`}
               >
