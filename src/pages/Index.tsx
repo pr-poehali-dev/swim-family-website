@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import SwimLevelTest from '@/components/SwimLevelTest';
 
 const Index = () => {
   const [selectedAudience, setSelectedAudience] = useState<'kids' | 'adults' | 'individual'>('kids');
@@ -262,21 +263,9 @@ const Index = () => {
             ))}
           </div>
           
-          <Card className="mt-12 max-w-3xl mx-auto bg-gradient-to-br from-primary/5 to-accent/10 border-2 border-primary/30 shadow-xl">
-            <CardContent className="p-8 md:p-10 text-center">
-              <Icon name="Sparkles" size={48} className="text-primary mx-auto mb-4" />
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
-                Узнайте, подходит ли вам Swim Family за 1 минуту!
-              </h3>
-              <p className="text-foreground/70 mb-6 text-lg">
-                Пройдите короткий тест и получите персональное предложение
-              </p>
-              <Button size="lg" className="bg-primary text-white hover:bg-primary/90 px-8 py-6 text-lg shadow-lg hover:scale-105 transition-all">
-                <Icon name="FileQuestion" className="mr-2" size={20} />
-                Пройти тест и получить бонус!
-              </Button>
-            </CardContent>
-          </Card>
+          <div className="mt-12">
+            <SwimLevelTest />
+          </div>
         </div>
       </section>
 
