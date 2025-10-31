@@ -28,12 +28,10 @@ const Index = () => {
   const trainers = [
     {
       name: 'Очагов Антон Владиславович',
-      role: 'Главный тренер, основатель методики',
+      role: 'Главный тренер',
       experience: 'Стаж 10 лет, КМС по плаванию',
-      achievements: 'Подготовил 15+ спортсменов-разрядников',
-      philosophy: 'Моя миссия — не просто научить технике, а показать, что вода — это источник силы и радости',
-      specialization: 'Работа с аквафобией, постановка техники с нуля',
-      image: 'https://cdn.poehali.dev/projects/2b714740-d40e-4ef4-b8ae-4db5d5a39d93/files/cd131187-253e-489a-92bd-f2f3f3a40e78.jpg',
+      phone: '89169455813',
+      image: 'https://cdn.poehali.dev/files/2f7ae86d-58ab-4ebd-b63f-10d843a91c08.JPG',
     },
     {
       name: 'Амирханов Артем',
@@ -339,23 +337,28 @@ const Index = () => {
                       <Icon name="Award" className="text-primary mt-1 flex-shrink-0" size={20} />
                       <span className="text-sm text-foreground/80">{trainer.experience}</span>
                     </div>
-                    <div className="flex items-start gap-2">
-                      <Icon name="Trophy" className="text-primary mt-1 flex-shrink-0" size={20} />
-                      <span className="text-sm text-foreground/80">{trainer.achievements}</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <Icon name="Target" className="text-primary mt-1 flex-shrink-0" size={20} />
-                      <span className="text-sm text-foreground/80">{trainer.specialization}</span>
-                    </div>
+                    {trainer.phone && (
+                      <div className="flex items-start gap-2">
+                        <Icon name="Phone" className="text-primary mt-1 flex-shrink-0" size={20} />
+                        <a href={`tel:+${trainer.phone}`} className="text-sm text-primary font-semibold hover:underline">
+                          +{trainer.phone}
+                        </a>
+                      </div>
+                    )}
                   </div>
                   
-                  <div className="bg-secondary/30 p-4 rounded-lg mb-6">
-                    <p className="text-sm italic text-foreground/70">"{trainer.philosophy}"</p>
-                  </div>
-                  
-                  <Button className="w-full" variant="outline">
-                    Записаться к {trainer.name.split(' ')[1]}
-                  </Button>
+                  {trainer.phone ? (
+                    <Button className="w-full" variant="outline" asChild>
+                      <a href={`tel:+${trainer.phone}`}>
+                        <Icon name="Phone" className="mr-2" size={18} />
+                        Записаться: +{trainer.phone}
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button className="w-full" variant="outline">
+                      Записаться к {trainer.name.split(' ')[1]}
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}
