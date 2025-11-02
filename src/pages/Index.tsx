@@ -90,16 +90,16 @@ const Index = () => {
           </div>
 
           <div className="animate-fade-in">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-2xl hover:animate-water-ripple transition-all duration-300 cursor-default leading-tight">
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-2xl hover:animate-water-ripple transition-all duration-300 cursor-default leading-tight px-2">
               Школа плавания Swim Family - больше, чем просто уроки плавания
             </h1>
             
-            <h2 className="text-xl md:text-2xl lg:text-3xl mb-8 text-white/95 font-semibold drop-shadow-lg max-w-4xl mx-auto">
+            <h2 className="text-lg md:text-2xl lg:text-3xl mb-8 text-white/95 font-semibold drop-shadow-lg max-w-4xl mx-auto px-2">
               От полного новичка до уверенного пловца всего за 10 занятий по нашей авторской методике. Гарантия результата!
             </h2>
             
-            <Badge className="mb-6 text-base md:text-lg px-6 py-3 bg-white/95 text-primary hover:bg-white shadow-xl">
-              <Icon name="Award" className="mr-2" size={20} />
+            <Badge className="mb-6 text-sm md:text-lg px-4 py-2 md:px-6 md:py-3 bg-white/95 text-primary hover:bg-white shadow-xl">
+              <Icon name="Award" className="mr-2" size={18} />
               Помогли 450+ ученикам за 6 лет!
             </Badge>
             
@@ -109,21 +109,23 @@ const Index = () => {
               </div>
             </div>
             
-            <Button 
-              size="lg" 
-              className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-110 transition-all duration-300 shadow-2xl group relative overflow-hidden font-bold"
-              asChild
-            >
-              <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20записаться%20на%20пробную%20тренировку%20со%20скидкой%2050%25" target="_blank" rel="noopener noreferrer">
-                <span className="relative z-10 flex items-center gap-2">
-                  <Icon name="Waves" size={24} />
-                  ЗАПИСАТЬСЯ НА ПРОБНУЮ ТРЕНИРОВКУ СО СКИДКОЙ 50%
-                </span>
-                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="absolute inset-0 animate-ripple-wave bg-white/20 rounded-lg" />
-                </span>
-              </a>
-            </Button>
+            <div className="px-4 w-full max-w-2xl mx-auto">
+              <Button 
+                size="lg" 
+                className="text-sm md:text-xl px-6 md:px-12 py-5 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-105 transition-all duration-300 shadow-2xl group relative overflow-hidden font-bold w-full rounded-lg"
+                asChild
+              >
+                <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20записаться%20на%20пробную%20тренировку%20со%20скидкой%2050%25" target="_blank" rel="noopener noreferrer">
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    <Icon name="Waves" size={20} />
+                    <span className="text-center">ЗАПИСАТЬСЯ НА ПРОБНУЮ ТРЕНИРОВКУ СО СКИДКОЙ 50%</span>
+                  </span>
+                  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="absolute inset-0 animate-ripple-wave bg-white/20 rounded-lg" />
+                  </span>
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -140,7 +142,7 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary px-4">
             Плаваем на результат и удовольствие от процесса!
           </h2>
           
@@ -227,7 +229,7 @@ const Index = () => {
 
       <section id="principles" className="py-16 md:py-24 bg-gradient-to-b from-secondary/20 to-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 max-w-4xl mx-auto text-primary">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-12 max-w-4xl mx-auto text-primary px-4">
             Наша школа — это не просто бассейн, это сообщество, где каждый чувствует себя особенным:
           </h2>
 
@@ -289,7 +291,7 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary px-4">
             Инвестируйте в себя: Выберите свой абонемент!
           </h2>
 
