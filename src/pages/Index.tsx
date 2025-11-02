@@ -227,31 +227,35 @@ const Index = () => {
 
       <section id="principles" className="py-16 md:py-24 bg-gradient-to-b from-secondary/20 to-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-primary">
-            Принципы нашей школы:
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
+            Swim Family: Плавайте, как дома, достигайте, как чемпионы!
           </h2>
+          
+          <p className="text-lg md:text-xl text-center mb-12 max-w-4xl mx-auto text-foreground/80">
+            Наша школа — это не просто бассейн, это сообщество, где каждый чувствует себя особенным:
+          </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
             {[
               {
                 icon: 'Users',
-                title: 'Семейная атмосфера',
-                description: 'Пристальное внимание к каждому ученику, чтобы он ощущал себя, как дома',
+                title: 'Теплая Семейная Атмосфера',
+                description: 'Мы создаем комфорт, где вы или ваш ребенок ощущает себя, как дома. Уютные группы до 6 человек, пристальное внимание тренера к каждому!',
               },
               {
                 icon: 'HandHeart',
-                title: 'Тренеры, которые верят',
-                description: 'Поддерживают и учат любить плавание, а не бояться ошибок',
+                title: 'Тренеры-Наставники',
+                description: 'Это вдохновители, которые верят в каждого ученика, поддерживают на каждом этапе и учат не бояться ошибок.',
               },
               {
                 icon: 'Brain',
-                title: 'Индивидуальные программы',
-                description: 'Внимание к психологии занимающегося, безопасная среда и видимый прогресс',
+                title: 'Индивидуальный Подход и Психологический Комфорт',
+                description: 'Индивидуальные программы, внимание к психологии занимающегося, безопасная среда и видимый прогресс уже через несколько занятий!',
               },
               {
                 icon: 'Award',
-                title: 'Акцент на технику',
-                description: 'Уважение к каждому ученику и его прогрессу',
+                title: 'Техника Мастерства',
+                description: 'Тренировки с акцентом на безупречную технику, которая позволит вам плавать эффективно, красиво и без усталости.',
               },
             ].map((principle, index) => (
               <Card key={index} className="border-2 border-primary/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/90 backdrop-blur">
