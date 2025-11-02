@@ -227,13 +227,9 @@ const Index = () => {
 
       <section id="principles" className="py-16 md:py-24 bg-gradient-to-b from-secondary/20 to-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
-            Swim Family: Плавайте, как дома, достигайте, как чемпионы!
-          </h2>
-          
-          <p className="text-lg md:text-xl text-center mb-12 max-w-4xl mx-auto text-foreground/80">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 max-w-4xl mx-auto text-primary">
             Наша школа — это не просто бассейн, это сообщество, где каждый чувствует себя особенным:
-          </p>
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
             {[
