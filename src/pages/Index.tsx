@@ -53,16 +53,19 @@ const Index = () => {
       name: 'Спортивный комплекс "Яуза"',
       address: 'Олонецкий пр., 5, Москва',
       features: '25-метровый бассейн, финская сауна',
+      coordinates: { lat: 55.8444, lng: 37.6604 },
     },
     {
       name: 'Голден Фитнесс',
       address: 'Староватутинский пр., 14, Москва',
       features: 'Детский бассейн, персональные занятия',
+      coordinates: { lat: 55.6189, lng: 37.5989 },
     },
     {
       name: 'НИУ МГСУ Бассейн',
       address: 'Ярославское ш., 26, стр. 4, Москва',
       features: 'Олимпийский бассейн, группы для спортсменов',
+      coordinates: { lat: 55.8507, lng: 37.6757 },
     },
   ];
 
@@ -88,20 +91,31 @@ const Index = () => {
     <div className="min-h-screen">
       <section 
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url('https://cdn.poehali.dev/projects/2b714740-d40e-4ef4-b8ae-4db5d5a39d93/files/b4a07ed4-f3f3-4861-97e1-a969684f7524.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/30 to-background/90" />
-
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="https://cdn.poehali.dev/files/pool-water-background.mp4" type="video/mp4" />
+        </video>
         
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/40 to-background/95" />
+
         <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+          <div className="mb-8 animate-fade-in">
+            <img 
+              src="https://cdn.poehali.dev/files/fc0fad9a-d15c-4f05-82d5-781513eeb086.jpg" 
+              alt="Swim Family Logo" 
+              className="h-24 md:h-32 mx-auto mb-8 drop-shadow-2xl"
+            />
+          </div>
+
           <div className="animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-2xl hover:scale-105 hover:animate-water-ripple transition-transform duration-300 cursor-default leading-tight">
-              Swim Family: Почувствуйте Свободу в Воде — Страх Останется Вчера!
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-2xl hover:animate-water-ripple transition-all duration-300 cursor-default leading-tight">
+              Школа плавания Swim Family - больше, чем просто уроки плавания
             </h1>
             
             <h2 className="text-xl md:text-2xl lg:text-3xl mb-8 text-white/95 font-semibold drop-shadow-lg max-w-4xl mx-auto">
@@ -109,65 +123,64 @@ const Index = () => {
             </h2>
             
             <Badge className="mb-6 text-base md:text-lg px-6 py-3 bg-white/95 text-primary hover:bg-white shadow-xl">
-              <Icon name="Trophy" className="mr-2" size={20} />
-              Помогли 850+ ученикам за 10 лет!
+              <Icon name="Award" className="mr-2" size={20} />
+              Помогли 450+ ученикам за 6 лет!
             </Badge>
             
             <div className="mb-8 overflow-hidden py-2">
-              <div className="inline-block bg-destructive text-white px-6 md:px-8 py-3 text-base md:text-lg font-bold animate-marquee whitespace-nowrap shadow-xl">
-                🔥 ИДЕТ НАБОР НА НОЯБРЬ — СПЕШИТЕ, МЕСТА ОГРАНИЧЕНЫ! 🔥
+              <div className="inline-block bg-gradient-to-r from-destructive via-orange-500 to-destructive text-white px-8 py-3 text-base md:text-lg font-bold animate-marquee-slow whitespace-nowrap shadow-xl rounded-full">
+                ИДЕТ НАБОР НА НОЯБРЬ
               </div>
             </div>
             
-            <a href="#test">
-              <Button 
-                size="lg" 
-                className="text-lg md:text-xl px-8 md:px-10 py-6 md:py-8 bg-white text-primary hover:bg-white/95 hover:scale-110 transition-all duration-300 shadow-2xl group relative overflow-hidden"
-              >
-                <span className="relative z-10">
-                  <Icon name="Target" className="inline mr-2" size={24} />
-                  ДИАГНОСТИКА ВАШЕГО УРОВНЯ!
+            <Button 
+              size="lg" 
+              className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-110 transition-all duration-300 shadow-2xl group relative overflow-hidden font-bold"
+              asChild
+            >
+              <a href="https://wa.me/79169455813?text=Здравствуйте!%20Хочу%20записаться%20на%20пробную%20тренировку%20со%20скидкой%2050%25">
+                <span className="relative z-10 flex items-center gap-2">
+                  <Icon name="Waves" size={24} />
+                  ЗАПИСАТЬСЯ НА ПРОБНУЮ ТРЕНИРОВКУ СО СКИДКОЙ 50%
                 </span>
                 <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="absolute inset-0 animate-ripple-wave bg-primary/20 rounded-full" />
+                  <span className="absolute inset-0 animate-ripple-wave bg-white/20 rounded-lg" />
                 </span>
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 wave-divider" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-background"></path>
+          </svg>
+        </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-secondary/10 to-background relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDk2YzciIGZpbGwtb3BhY2l0eT0iMC4yIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')]" />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12 overflow-hidden">
-            <a href="#pricing">
-              <div className="inline-block bg-gradient-to-r from-destructive via-destructive/90 to-destructive text-white px-8 py-3 text-lg font-bold shadow-lg hover:shadow-xl transition-shadow cursor-pointer animate-pulse-slow hover:scale-105">
-                <Icon name="CalendarDays" className="inline mr-2" size={20} />
-                ИДЕТ НАБОР НА НОЯБРЬ — СПЕШИТЕ, МЕСТА ОГРАНИЧЕНЫ!
-              </div>
-            </a>
-          </div>
-          
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
-            Мы не просто учим плавать. Мы учим любить воду!
+            Плаваем на результат и удовольствие от процесса!
           </h2>
           
           <p className="text-lg md:text-xl text-center mb-12 max-w-4xl mx-auto text-foreground/80 leading-relaxed">
-            В Swim Family каждый урок — это погружение в мир заботы и безопасности. Мы понимаем, что вода может пугать, 
-            но наша уникая <span className="font-bold text-primary">Авторская Методика</span> превращает этот страх в истинное удовольствие и уверенность.
+            В Swim Family каждый урок — это погружение в мир заботы и безопасности.
+          </p>
+          
+          <p className="text-lg md:text-xl text-center mb-12 max-w-4xl mx-auto text-foreground/90 leading-relaxed">
+            Мы понимаем, что вода может пугать, но наша уникальная <span className="font-bold text-primary">Авторская Методика</span> превращает этот страх в истинное удовольствие и уверенность.
           </p>
           
           <p className="text-lg text-center mb-12 max-w-3xl mx-auto font-semibold text-primary">
             С первого занятия по нашей собственной методике мы поможем вам:
           </p>
           
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-12">
             {[
               {
                 icon: 'Smile',
@@ -185,36 +198,58 @@ const Index = () => {
                 description: 'Проплывёте первые метры, а затем и первые дистанции, которыми будете гордиться',
               },
               {
-                icon: 'BarChart3',
+                icon: 'LineChart',
                 title: 'Преобразить свои навыки',
                 description: 'Улучшите технику, скорость и выносливость, достигая новых спортивных вершин',
               },
-            ].map((item, index) => (
-              <Card 
-                key={index} 
-                className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-primary/20 hover:border-primary/50 bg-white/80 backdrop-blur-sm"
-              >
-                <CardContent className="p-6 md:p-8">
-                  <div className="mb-4 inline-block p-3 md:p-4 bg-primary/10 rounded-full group-hover:animate-bubble-float">
-                    <Icon name={item.icon} size={36} className="text-primary" />
+              {
+                icon: 'Dumbbell',
+                title: 'Улучшить физическую форму',
+                description: 'Укрепите осанку, забудьте про боль в спине и шее, избавитесь от лишних килограмм',
+              },
+            ].map((benefit, index) => (
+              <Card key={index} className="border-2 border-primary/20 hover:border-primary/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group bg-white/80 backdrop-blur">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/10 rounded-full group-hover:animate-bubble-float">
+                      <Icon name={benefit.icon} size={28} className="text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-lg mb-2 text-foreground group-hover:text-primary transition-colors">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-foreground/70 text-sm leading-relaxed">
+                        {benefit.description}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary">{item.title}</h3>
-                  <p className="text-foreground/70 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-          
-          <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 px-8 py-6 text-lg shadow-lg">
-              <Icon name="BookOpen" className="mr-2" size={20} />
-              Узнать о нашей методике подробнее!
+
+          <div className="text-center">
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all duration-300 shadow-xl"
+              asChild
+            >
+              <a href="https://wa.me/79169455813?text=Здравствуйте!%20Хочу%20узнать%20подробнее%20о%20вашей%20методике%20плавания">
+                <Icon name="MessageCircle" className="mr-2" size={20} />
+                Узнать о нашей методике подробнее!
+              </a>
             </Button>
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-16">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full rotate-180">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-secondary/20"></path>
+          </svg>
+        </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-b from-secondary/20 to-background relative">
+      <section id="principles" className="py-16 md:py-24 bg-gradient-to-b from-secondary/20 to-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
             Swim Family: Плавайте, как дома, достигайте, как чемпионы!
@@ -223,231 +258,248 @@ const Index = () => {
           <p className="text-lg md:text-xl text-center mb-12 max-w-4xl mx-auto text-foreground/80">
             Наша школа — это не просто бассейн, это сообщество, где каждый чувствует себя особенным:
           </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
             {[
               {
                 icon: 'Users',
                 title: 'Теплая Семейная Атмосфера',
-                description: 'Мы создаем комфорт, где вы или ваш ребенок ощущает себя, как дома. Уютные группы до 6 человек!',
+                description: 'Мы создаем комфорт, где вы или ваш ребенок ощущает себя, как дома. Уютные группы до 6 человек, пристальное внимание тренера к каждому!',
               },
               {
                 icon: 'HandHeart',
                 title: 'Тренеры-Наставники',
-                description: 'Это вдохновители, которые верят в каждого ученика и поддерживают на каждом этапе',
+                description: 'Это вдохновители, которые верят в каждого ученика, поддерживают на каждом этапе и учат не бояться ошибок.',
               },
               {
                 icon: 'Brain',
-                title: 'Индивидуальный Подход',
-                description: 'Индивидуальные программы, внимание к психологии, безопасная среда и видимый прогресс!',
+                title: 'Индивидуальный Подход и Психологический Комфорт',
+                description: 'Индивидуальные программы, внимание к психологии занимающегося, безопасная среда и видимый прогресс уже через несколько занятий!',
               },
               {
-                icon: 'Swords',
+                icon: 'Award',
                 title: 'Техника Мастерства',
-                description: 'Тренировки с акцентом на безупречную технику для эффективного плавания',
+                description: 'Тренировки с акцентом на безупречную технику, которая позволит вам плавать эффективно, красиво и без усталости.',
               },
-            ].map((item, index) => (
-              <Card 
-                key={index} 
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-primary/10 hover:border-primary/40"
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4 inline-block p-4 bg-primary/10 rounded-full group-hover:scale-110 transition-transform">
-                    <Icon name={item.icon} size={36} className="text-primary" />
+            ].map((principle, index) => (
+              <Card key={index} className="border-2 border-primary/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/90 backdrop-blur">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="p-4 bg-gradient-to-br from-primary to-accent rounded-full">
+                      <Icon name={principle.icon} size={32} className="text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-xl mb-3 text-primary">
+                        {principle.title}
+                      </h3>
+                      <p className="text-foreground/80 leading-relaxed">
+                        {principle.description}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-primary">{item.title}</h3>
-                  <p className="text-sm text-foreground/70 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-          
-          <div id="test" className="mt-12 scroll-mt-20">
-            <SwimLevelTest />
+
+          <div className="text-center">
+            <Card className="max-w-2xl mx-auto bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-4 text-primary">
+                  <Icon name="ClipboardCheck" className="inline mr-2" size={28} />
+                  Узнайте, подходит ли вам Swim Family за 1 минуту!
+                </h3>
+                <p className="text-lg mb-6 text-foreground/80">
+                  Пройдите короткий тест и получите персональное предложение
+                </p>
+                <a href="#test">
+                  <Button 
+                    size="lg" 
+                    className="text-lg px-8 py-6 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-105 transition-all shadow-xl"
+                  >
+                    <Icon name="Target" className="mr-2" size={24} />
+                    Пройти тест и получить бонус!
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      <section id="pricing" className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden scroll-mt-20">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_hsl(199,89%,48%)_0%,_transparent_50%)]" />
+      <section id="test" className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/20">
+        <div className="container mx-auto px-4">
+          <SwimLevelTest />
         </div>
-        
+      </section>
+
+      <section id="pricing" className="py-16 md:py-24 bg-gradient-to-b from-secondary/20 to-background relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent rounded-full blur-3xl animate-float-delayed" />
+        </div>
+
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
             Инвестируйте в себя: Выберите свой абонемент!
           </h2>
-          
-          <div className="flex justify-center gap-3 md:gap-4 mb-12 flex-wrap">
-            {[
-              { key: 'kids', label: 'Групповые для детей', icon: 'Baby' },
-              { key: 'adults', label: 'Групповые для взрослых', icon: 'Users' },
-              { key: 'individual', label: 'Индивидуальные', icon: 'User' },
-            ].map((tab) => (
-              <Button
-                key={tab.key}
-                onClick={() => setSelectedAudience(tab.key as typeof selectedAudience)}
-                variant={selectedAudience === tab.key ? 'default' : 'outline'}
-                className={`px-4 md:px-6 py-4 md:py-6 text-sm md:text-base transition-all duration-500 ${
-                  selectedAudience === tab.key
-                    ? 'bg-primary text-white shadow-xl scale-105 animate-water-ripple'
-                    : 'hover:scale-105 border-primary/30'
-                }`}
-              >
-                <Icon name={tab.icon} className="mr-2" size={20} />
-                {tab.label}
-              </Button>
-            ))}
+
+          <div className="flex justify-center gap-4 mb-12 flex-wrap">
+            <Button
+              variant={selectedAudience === 'kids' ? 'default' : 'outline'}
+              size="lg"
+              onClick={() => setSelectedAudience('kids')}
+              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave"
+            >
+              <Icon name="Baby" className="mr-2" size={20} />
+              Групповые занятия для детей
+            </Button>
+            <Button
+              variant={selectedAudience === 'adults' ? 'default' : 'outline'}
+              size="lg"
+              onClick={() => setSelectedAudience('adults')}
+              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave"
+            >
+              <Icon name="Users" className="mr-2" size={20} />
+              Групповые занятия для взрослых
+            </Button>
+            <Button
+              variant={selectedAudience === 'individual' ? 'default' : 'outline'}
+              size="lg"
+              onClick={() => setSelectedAudience('individual')}
+              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave"
+            >
+              <Icon name="User" className="mr-2" size={20} />
+              Индивидуальные занятия
+            </Button>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
             {prices[selectedAudience].map((plan, index) => (
-              <Card 
+              <Card
                 key={index}
                 className={`relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
-                  plan.popular 
-                    ? 'border-4 border-primary shadow-2xl scale-105' 
-                    : 'border-2 border-primary/20'
+                  plan.popular ? 'border-4 border-orange-500 scale-105' : 'border-2 border-primary/20'
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 right-0 bg-destructive text-white px-4 py-1 text-sm font-bold transform rotate-12 translate-x-8 -translate-y-2 shadow-lg">
+                  <div className="absolute top-0 right-0 bg-gradient-to-r from-orange-500 to-destructive text-white px-4 py-2 text-sm font-bold">
                     ТОП-ВЫБОР!
                   </div>
                 )}
-                
-                <CardContent className="p-6 md:p-8">
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
-                      {plan.name}
-                    </h3>
-                    <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                      {plan.price.toLocaleString('ru-RU')} ₽
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold mb-4 text-primary">{plan.name}</h3>
+                  <div className="mb-6">
+                    <div className="text-4xl font-bold text-foreground mb-2">
+                      {plan.price.toLocaleString()} ₽
                     </div>
                     <div className="text-sm text-foreground/60">
-                      {plan.sessions} {plan.sessions === 1 ? 'занятие' : 'занятий'}
+                      {plan.sessions} {plan.sessions === 1 ? 'занятие' : 'занятия'}
+                    </div>
+                    <div className="text-lg text-primary font-semibold mt-2">
+                      {plan.perSession} ₽ / занятие
                     </div>
                   </div>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center justify-between py-2 border-b border-border">
-                      <span className="text-foreground/70">За занятие:</span>
-                      <span className="font-bold text-primary">{plan.perSession} ₽</span>
-                    </div>
-                    
-                    {plan.savings && (
-                      <div className="bg-green-50 border-2 border-green-500 rounded-lg p-3 text-center">
-                        <Icon name="Sparkles" className="inline mr-1 text-green-600" size={18} />
-                        <span className="font-bold text-green-600">
-                          Экономия {plan.savings.toLocaleString('ru-RU')} ₽
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  
-                  <Button 
-                    className={`w-full py-6 text-base md:text-lg transition-all duration-300 hover:scale-105 ${
-                      plan.popular 
-                        ? 'bg-primary hover:bg-primary/90 shadow-lg' 
-                        : 'bg-primary/80 hover:bg-primary'
-                    }`}
+                  {plan.savings && (
+                    <Badge className="mb-4 bg-green-500 text-white">
+                      Экономия {plan.savings} ₽
+                    </Badge>
+                  )}
+                  <Button
+                    className="w-full bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all"
+                    size="lg"
+                    asChild
                   >
-                    Выбрать "{plan.name}"
+                    <a href="https://wa.me/79169455813?text=Здравствуйте!%20Хочу%20выбрать%20абонемент">
+                      Выбрать абонемент
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
-          
-          <Card className="mt-12 max-w-4xl mx-auto bg-gradient-to-br from-accent/20 to-secondary/30 border-2 border-primary/20">
-            <CardContent className="p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-bold mb-6 text-primary text-center">
+
+          <Card className="max-w-4xl mx-auto bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 mb-12">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-6 text-center text-primary">
                 Бонусы, которые вы получаете с каждым абонементом:
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {[
-                  { icon: 'HandHeart', text: 'Индивидуальный подход еще до начала занятий' },
+                  { icon: 'Hand', text: 'Индивидуальный подход еще до начала занятий' },
                   { icon: 'Users', text: 'Комфортные группы до 6 человек' },
                   { icon: 'Droplet', text: 'Всегда чистый бассейн' },
                   { icon: 'Clock', text: 'Возможность заморозки абонемента в случае болезни' },
                 ].map((bonus, index) => (
-                  <div key={index} className="flex items-center gap-3 bg-white/50 rounded-lg p-4">
-                    <Icon name={bonus.icon} className="text-primary flex-shrink-0" size={24} />
+                  <div key={index} className="flex items-center gap-3">
+                    <Icon name={bonus.icon} size={24} className="text-primary flex-shrink-0" />
                     <span className="text-foreground/80">{bonus.text}</span>
                   </div>
                 ))}
               </div>
             </CardContent>
           </Card>
-          
-          <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-primary to-accent text-white hover:scale-110 transition-all duration-300 px-10 py-7 text-lg md:text-xl shadow-2xl">
-              <Icon name="Waves" className="mr-2" size={24} />
-              ВЫБРАТЬ АБОНЕМЕНТ И НАЧАТЬ ПЛЫТЬ К МЕЧТЕ!
+
+          <div className="text-center">
+            <Button
+              size="lg"
+              className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-110 transition-all shadow-2xl"
+              asChild
+            >
+              <a href="https://wa.me/79169455813?text=Здравствуйте!%20Хочу%20начать%20плыть%20к%20мечте">
+                <Icon name="Waves" className="mr-2" size={24} />
+                ВЫБРАТЬ АБОНЕМЕНТ И НАЧАТЬ ПЛЫТЬ К МЕЧТЕ!
+              </a>
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-b from-secondary/20 to-background">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-primary">
-            Познакомьтесь с нашей командой — теми, кто влюбляет в воду!
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-primary">
+            Наши Тренеры
           </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 md:gap-10 max-w-6xl mx-auto">
+          <p className="text-lg text-center mb-12 text-foreground/70 max-w-2xl mx-auto">
+            Профессионалы с огромным опытом и искренней любовью к своему делу
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {trainers.map((trainer, index) => (
-              <Card 
-                key={index} 
-                className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-primary/20"
-              >
-                <div className="relative h-64 md:h-80 overflow-hidden">
-                  <img 
-                    src={trainer.image} 
+              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 border-primary/20">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={trainer.image}
                     alt={trainer.name}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
-                <CardContent className="p-6 md:p-8">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary">{trainer.name}</h3>
-                  <Badge className="mb-4 text-base">{trainer.role}</Badge>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-start gap-2">
-                      <Icon name="Award" className="text-primary mt-1 flex-shrink-0" size={20} />
-                      <span className="text-sm text-foreground/80">{trainer.experience}</span>
-                    </div>
-                    {trainer.achievements && (
-                      <div className="flex items-start gap-2">
-                        <Icon name="Trophy" className="text-primary mt-1 flex-shrink-0" size={20} />
-                        <span className="text-sm text-foreground/80">{trainer.achievements}</span>
-                      </div>
-                    )}
-                    {trainer.specialization && (
-                      <div className="flex items-start gap-2">
-                        <Icon name="Target" className="text-primary mt-1 flex-shrink-0" size={20} />
-                        <span className="text-sm text-foreground/80">{trainer.specialization}</span>
-                      </div>
-                    )}
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold mb-2 text-primary">{trainer.name}</h3>
+                  <p className="text-accent font-semibold mb-4">{trainer.role}</p>
+                  <div className="space-y-3 text-foreground/80">
+                    <p className="flex items-start gap-2">
+                      <Icon name="Award" size={20} className="text-primary flex-shrink-0 mt-1" />
+                      <span>{trainer.experience}</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <Icon name="Trophy" size={20} className="text-primary flex-shrink-0 mt-1" />
+                      <span>{trainer.achievements}</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <Icon name="Target" size={20} className="text-primary flex-shrink-0 mt-1" />
+                      <span>{trainer.specialization}</span>
+                    </p>
+                    <p className="italic text-foreground/70 border-l-4 border-primary pl-4 mt-4">
+                      "{trainer.philosophy}"
+                    </p>
                   </div>
-                  
-                  {trainer.philosophy && (
-                    <div className="bg-secondary/30 p-4 rounded-lg mb-6">
-                      <p className="text-sm italic text-foreground/70">"{trainer.philosophy}"</p>
-                    </div>
-                  )}
-                  
-                  {trainer.phone ? (
-                    <Button className="w-full py-6 text-base hover:scale-105 transition-all" variant="outline" asChild>
+                  {trainer.phone && (
+                    <Button className="w-full mt-6 bg-gradient-to-r from-primary to-accent text-white" asChild>
                       <a href={`tel:+${trainer.phone}`}>
                         <Icon name="Phone" className="mr-2" size={18} />
-                        Записаться: +{trainer.phone}
+                        Позвонить тренеру
                       </a>
-                    </Button>
-                  ) : (
-                    <Button className="w-full py-6 text-base hover:scale-105 transition-all" variant="outline">
-                      Записаться к {trainer.name.split(' ')[1]}
                     </Button>
                   )}
                 </CardContent>
@@ -457,97 +509,86 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary/20">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-secondary/20 to-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-primary">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-primary">
             Что говорят те, кто уже выбрал Swim Family?
           </h2>
-          
-          <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
             {reviews.map((review, index) => (
-              <Card 
-                key={index} 
-                className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-primary/10 bg-white/80 backdrop-blur-sm overflow-hidden group"
+              <Card
+                key={index}
+                className="bg-gradient-to-br from-white to-primary/5 border-2 border-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
               >
-                <CardContent className="p-6 md:p-8 relative">
-                  <div className="absolute top-4 right-4 text-primary/10 group-hover:text-primary/20 transition-colors">
-                    <Icon name="Quote" size={64} />
-                  </div>
-                  <p className="text-base md:text-lg text-foreground/80 mb-4 italic leading-relaxed relative z-10">
-                    "{review.text}"
+                <div className="absolute top-4 left-4 text-primary/20 text-6xl font-serif">"</div>
+                <CardContent className="p-8 relative z-10">
+                  <p className="text-foreground/80 mb-6 leading-relaxed italic">
+                    {review.text}
                   </p>
-                  <div className="flex items-center gap-3 relative z-10">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Icon name="User" size={20} className="text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-primary">{review.author}</div>
-                      <div className="text-sm text-foreground/60">{review.role}</div>
-                    </div>
+                  <div className="border-t-2 border-primary/20 pt-4">
+                    <p className="font-bold text-primary">{review.author}</p>
+                    <p className="text-sm text-foreground/60">{review.role}</p>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
-          
-          <Card className="mt-12 max-w-3xl mx-auto bg-gradient-to-br from-primary to-accent text-white border-0 shadow-2xl">
-            <CardContent className="p-8 md:p-10 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                Скидка 50% на пробное занятие!
-              </h3>
-              <p className="text-white/90 mb-6 text-lg">
-                Начните свою историю успеха уже сегодня
-              </p>
-              <Button 
-                size="lg" 
-                className="bg-white text-primary hover:bg-white/90 px-10 py-7 text-lg md:text-xl shadow-lg hover:scale-110 transition-all"
-              >
-                <Icon name="Rocket" className="mr-2" size={24} />
-                ПОПАСТЬ НА ЗАНЯТИЕ СО СКИДКОЙ 50%!
-              </Button>
-              <p className="text-white/80 mt-4 text-sm">
-                * Скидка действует только для новых клиентов и при записи онлайн!
-              </p>
-            </CardContent>
-          </Card>
+
+          <div className="text-center">
+            <Button
+              size="lg"
+              className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-110 transition-all shadow-2xl"
+              asChild
+            >
+              <a href="https://wa.me/79169455813?text=Здравствуйте!%20Хочу%20попасть%20на%20занятие%20со%20скидкой%2050%25">
+                <Icon name="Star" className="mr-2" size={24} />
+                ПОПАСТЬ НА ЗАНЯТИЕ СО СКИДКОЙ 50% И НАЧАТЬ СВОЮ ИСТОРИЮ УСПЕХА!
+              </a>
+            </Button>
+            <p className="text-sm text-foreground/60 mt-4">
+              Скидка действует только для новых клиентов и при записи онлайн!
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-b from-secondary/20 to-background">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-primary">
             Выберите удобный для вас бассейн Swim Family
           </h2>
-          
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pools.map((pool, index) => (
-              <Card 
-                key={index} 
-                className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 border-primary/20"
-              >
-                <CardContent className="p-6 md:p-8">
-                  <div className="mb-4 inline-block p-3 bg-primary/10 rounded-full">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-primary/20">
+                <CardContent className="p-6">
+                  <div className="mb-4">
                     <Icon name="MapPin" size={32} className="text-primary" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary">{pool.name}</h3>
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-start gap-2">
-                      <Icon name="Navigation" className="text-primary mt-1 flex-shrink-0" size={18} />
-                      <span className="text-sm text-foreground/80">{pool.address}</span>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <Icon name="Sparkles" className="text-primary mt-1 flex-shrink-0" size={18} />
-                      <span className="text-sm text-foreground/80">{pool.features}</span>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Button variant="outline" className="w-full hover:bg-primary hover:text-white transition-all">
-                      <Icon name="Map" className="mr-2" size={18} />
-                      Построить маршрут
-                    </Button>
-                    <Button variant="outline" className="w-full hover:bg-primary hover:text-white transition-all">
-                      <Icon name="Calendar" className="mr-2" size={18} />
-                      Посмотреть расписание
+                  <h3 className="text-xl font-bold mb-3 text-primary">{pool.name}</h3>
+                  <p className="text-foreground/80 mb-2 flex items-start gap-2">
+                    <Icon name="MapPin" size={18} className="flex-shrink-0 mt-1 text-accent" />
+                    {pool.address}
+                  </p>
+                  <p className="text-foreground/70 mb-4 flex items-start gap-2">
+                    <Icon name="Info" size={18} className="flex-shrink-0 mt-1 text-accent" />
+                    {pool.features}
+                  </p>
+                  <div className="flex gap-2">
+                    <Button
+                      variant="outline"
+                      className="flex-1 hover:bg-primary hover:text-white"
+                      asChild
+                    >
+                      <a
+                        href={`https://yandex.ru/maps/?rtext=~${pool.coordinates.lat},${pool.coordinates.lng}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Icon name="Navigation" size={18} className="mr-2" />
+                        Маршрут
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -557,63 +598,67 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-gradient-to-b from-primary to-primary/90 text-white py-12 md:py-16">
+      <footer className="bg-gradient-to-br from-primary to-accent text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Остались вопросы? Свяжитесь с нами!
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-10">
-              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all">
-                <CardContent className="p-6 text-center">
-                  <Icon name="Phone" size={32} className="mx-auto mb-3" />
-                  <div className="text-sm mb-1">Телефон</div>
-                  <a href="tel:+79169455813" className="font-bold hover:underline text-lg">
-                    +7 (916) 945-58-13
-                  </a>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all">
-                <CardContent className="p-6 text-center">
-                  <Icon name="Mail" size={32} className="mx-auto mb-3" />
-                  <div className="text-sm mb-1">Email</div>
-                  <a href="mailto:info@swimfamily.ru" className="font-bold hover:underline text-lg">
-                    info@swimfamily.ru
-                  </a>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all">
-                <CardContent className="p-6 text-center">
-                  <Icon name="MessageCircle" size={32} className="mx-auto mb-3" />
-                  <div className="text-sm mb-1">Мессенджеры</div>
-                  <div className="flex justify-center gap-3 mt-2">
-                    <a href="#" className="hover:scale-125 transition-transform">
-                      <Icon name="MessageCircle" size={24} />
-                    </a>
-                    <a href="#" className="hover:scale-125 transition-transform">
-                      <Icon name="Send" size={24} />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-            
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/90 px-10 py-7 text-lg md:text-xl shadow-xl hover:scale-110 transition-all"
-            >
-              <Icon name="PhoneCall" className="mr-2" size={24} />
-              ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
-            </Button>
-            
-            <div className="mt-10 pt-8 border-t border-white/20">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Swim Family</h3>
               <p className="text-white/80">
-                © 2024 Swim Family. Школа плавания. Все права защищены.
+                Школа плавания, где каждый чувствует себя как дома
               </p>
             </div>
+
+            <div>
+              <h4 className="text-xl font-bold mb-4">Контакты</h4>
+              <div className="space-y-3">
+                <a href="tel:+79169455813" className="flex items-center gap-2 hover:text-white/80 transition-colors">
+                  <Icon name="Phone" size={20} />
+                  +7 (916) 945-58-13
+                </a>
+                <a href="mailto:ochagovanton@yandex.ru" className="flex items-center gap-2 hover:text-white/80 transition-colors">
+                  <Icon name="Mail" size={20} />
+                  ochagovanton@yandex.ru
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold mb-4">Мы в соцсетях</h4>
+              <div className="flex gap-4">
+                <a
+                  href="https://wa.me/79169455813"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-all hover:scale-110"
+                >
+                  <Icon name="MessageCircle" size={24} />
+                </a>
+                <a
+                  href="https://t.me/+79169455813"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-all hover:scale-110"
+                >
+                  <Icon name="Send" size={24} />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-white/20 pt-8 text-center">
+            <Button
+              size="lg"
+              className="bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all shadow-xl mb-4"
+              asChild
+            >
+              <a href="https://wa.me/79169455813?text=Здравствуйте!%20Прошу%20перезвонить%20мне">
+                <Icon name="PhoneCall" className="mr-2" size={20} />
+                ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
+              </a>
+            </Button>
+            <p className="text-white/60 text-sm mt-6">
+              © 2024 Swim Family. Все права защищены.
+            </p>
           </div>
         </div>
       </footer>
