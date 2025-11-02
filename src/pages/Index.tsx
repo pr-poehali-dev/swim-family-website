@@ -207,7 +207,7 @@ const Index = () => {
           <div className="text-center">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all duration-300 shadow-xl"
+              className="text-lg px-12 py-6 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all duration-300 shadow-xl min-w-[300px] rounded-lg"
               asChild
             >
               <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20узнать%20подробнее%20о%20вашей%20методике%20плавания" target="_blank" rel="noopener noreferrer">
@@ -227,35 +227,31 @@ const Index = () => {
 
       <section id="principles" className="py-16 md:py-24 bg-gradient-to-b from-secondary/20 to-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
-            Swim Family: Плавайте, как дома, достигайте, как чемпионы!
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-primary">
+            Принципы нашей школы:
           </h2>
-          
-          <p className="text-lg md:text-xl text-center mb-12 max-w-4xl mx-auto text-foreground/80">
-            Наша школа — это не просто бассейн, это сообщество, где каждый чувствует себя особенным:
-          </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
             {[
               {
                 icon: 'Users',
-                title: 'Теплая Семейная Атмосфера',
-                description: 'Мы создаем комфорт, где вы или ваш ребенок ощущает себя, как дома. Уютные группы до 6 человек, пристальное внимание тренера к каждому!',
+                title: 'Семейная атмосфера',
+                description: 'Пристальное внимание к каждому ученику, чтобы он ощущал себя, как дома',
               },
               {
                 icon: 'HandHeart',
-                title: 'Тренеры-Наставники',
-                description: 'Это вдохновители, которые верят в каждого ученика, поддерживают на каждом этапе и учат не бояться ошибок.',
+                title: 'Тренеры, которые верят',
+                description: 'Поддерживают и учат любить плавание, а не бояться ошибок',
               },
               {
                 icon: 'Brain',
-                title: 'Индивидуальный Подход и Психологический Комфорт',
-                description: 'Индивидуальные программы, внимание к психологии занимающегося, безопасная среда и видимый прогресс уже через несколько занятий!',
+                title: 'Индивидуальные программы',
+                description: 'Внимание к психологии занимающегося, безопасная среда и видимый прогресс',
               },
               {
                 icon: 'Award',
-                title: 'Техника Мастерства',
-                description: 'Тренировки с акцентом на безупречную технику, которая позволит вам плавать эффективно, красиво и без усталости.',
+                title: 'Акцент на технику',
+                description: 'Уважение к каждому ученику и его прогрессу',
               },
             ].map((principle, index) => (
               <Card key={index} className="border-2 border-primary/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-white/90 backdrop-blur">
@@ -302,7 +298,7 @@ const Index = () => {
               variant={selectedAudience === 'kids' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('kids')}
-              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave"
+              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave min-w-[280px] rounded-lg"
             >
               <Icon name="Baby" className="mr-2" size={20} />
               Групповые занятия для детей
@@ -311,7 +307,7 @@ const Index = () => {
               variant={selectedAudience === 'adults' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('adults')}
-              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave"
+              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave min-w-[280px] rounded-lg"
             >
               <Icon name="Users" className="mr-2" size={20} />
               Групповые занятия для взрослых
@@ -320,7 +316,7 @@ const Index = () => {
               variant={selectedAudience === 'individual' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('individual')}
-              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave"
+              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave min-w-[280px] rounded-lg"
             >
               <Icon name="User" className="mr-2" size={20} />
               Индивидуальные занятия
