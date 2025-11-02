@@ -277,29 +277,6 @@ const Index = () => {
               </Card>
             ))}
           </div>
-
-          <div className="text-center">
-            <Card className="max-w-2xl mx-auto bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4 text-primary">
-                  <Icon name="ClipboardCheck" className="inline mr-2" size={28} />
-                  Узнайте, подходит ли вам Swim Family за 1 минуту!
-                </h3>
-                <p className="text-lg mb-6 text-foreground/80">
-                  Пройдите короткий тест и получите персональное предложение
-                </p>
-                <a href="#test">
-                  <Button 
-                    size="lg" 
-                    className="text-lg px-8 py-6 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-105 transition-all shadow-xl"
-                  >
-                    <Icon name="Target" className="mr-2" size={24} />
-                    Пройти тест и получить бонус!
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
