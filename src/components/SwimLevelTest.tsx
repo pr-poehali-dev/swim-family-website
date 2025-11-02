@@ -303,8 +303,8 @@ export default function SwimLevelTest() {
                   className="flex-1 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all py-6 text-lg"
                   asChild
                 >
-                  <a href="tel:+79169455813">
-                    <Icon name="Phone" className="mr-2" size={20} />
+                  <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Прошёл%20тест%20и%20хочу%20записаться%20на%20занятие" target="_blank" rel="noopener noreferrer">
+                    <Icon name="MessageCircle" className="mr-2" size={20} />
                     Записаться на занятие
                   </a>
                 </Button>

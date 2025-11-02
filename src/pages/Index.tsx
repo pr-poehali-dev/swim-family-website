@@ -114,7 +114,7 @@ const Index = () => {
               className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-110 transition-all duration-300 shadow-2xl group relative overflow-hidden font-bold"
               asChild
             >
-              <a href="https://wa.me/79169455813?text=Здравствуйте!%20Хочу%20записаться%20на%20пробную%20тренировку%20со%20скидкой%2050%25">
+              <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20записаться%20на%20пробную%20тренировку%20со%20скидкой%2050%25">
                 <span className="relative z-10 flex items-center gap-2">
                   <Icon name="Waves" size={24} />
                   ЗАПИСАТЬСЯ НА ПРОБНУЮ ТРЕНИРОВКУ СО СКИДКОЙ 50%
@@ -210,7 +210,7 @@ const Index = () => {
               className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all duration-300 shadow-xl"
               asChild
             >
-              <a href="https://wa.me/79169455813?text=Здравствуйте!%20Хочу%20узнать%20подробнее%20о%20вашей%20методике%20плавания">
+              <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20узнать%20подробнее%20о%20вашей%20методике%20плавания">
                 <Icon name="MessageCircle" className="mr-2" size={20} />
                 Узнать о нашей методике подробнее!
               </a>
@@ -386,7 +386,7 @@ const Index = () => {
                     size="lg"
                     asChild
                   >
-                    <a href="https://wa.me/79169455813?text=Здравствуйте!%20Хочу%20выбрать%20абонемент">
+                    <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20выбрать%20абонемент">
                       Выбрать абонемент
                     </a>
                   </Button>
@@ -422,7 +422,7 @@ const Index = () => {
               className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-110 transition-all shadow-2xl"
               asChild
             >
-              <a href="https://wa.me/79169455813?text=Здравствуйте!%20Хочу%20начать%20плыть%20к%20мечте">
+              <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20начать%20плыть%20к%20мечте">
                 <Icon name="Waves" className="mr-2" size={24} />
                 ВЫБРАТЬ АБОНЕМЕНТ И НАЧАТЬ ПЛЫТЬ К МЕЧТЕ!
               </a>
@@ -463,7 +463,7 @@ const Index = () => {
               className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-110 transition-all shadow-2xl"
               asChild
             >
-              <a href="https://wa.me/79169455813?text=Здравствуйте!%20Хочу%20попасть%20на%20занятие%20со%20скидкой%2050%25">
+              <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20попасть%20на%20занятие%20со%20скидкой%2050%25">
                 <Icon name="Star" className="mr-2" size={24} />
                 ПОПАСТЬ НА ЗАНЯТИЕ СО СКИДКОЙ 50% И НАЧАТЬ СВОЮ ИСТОРИЮ УСПЕХА!
               </a>
@@ -548,7 +548,7 @@ const Index = () => {
               <h4 className="text-xl font-bold mb-4">Мы в соцсетях</h4>
               <div className="flex gap-4">
                 <a
-                  href="https://wa.me/79169455813"
+                  href="https://api.whatsapp.com/send?phone=79169455813"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-all hover:scale-110"
@@ -573,7 +573,7 @@ const Index = () => {
               className="bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all shadow-xl mb-4"
               asChild
             >
-              <a href="https://wa.me/79169455813?text=Здравствуйте!%20Прошу%20перезвонить%20мне">
+              <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Прошу%20перезвонить%20мне">
                 <Icon name="PhoneCall" className="mr-2" size={20} />
                 ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
               </a>
