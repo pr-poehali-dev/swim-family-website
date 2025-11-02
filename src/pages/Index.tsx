@@ -293,32 +293,32 @@ const Index = () => {
             Инвестируйте в себя: Выберите свой абонемент!
           </h2>
 
-          <div className="flex flex-col md:flex-row justify-center gap-4 mb-12 items-stretch max-w-4xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-center gap-3 mb-12 items-stretch max-w-5xl mx-auto">
             <Button
               variant={selectedAudience === 'kids' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('kids')}
-              className="px-6 py-6 text-base md:text-lg hover:scale-105 transition-all hover:animate-ripple-wave rounded-lg flex-1"
+              className="px-4 py-5 text-sm md:text-base hover:scale-105 transition-all hover:animate-ripple-wave rounded-lg flex-1"
             >
-              <Icon name="Baby" className="mr-2" size={20} />
+              <Icon name="Baby" className="mr-2" size={18} />
               Групповые для детей
             </Button>
             <Button
               variant={selectedAudience === 'adults' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('adults')}
-              className="px-6 py-6 text-base md:text-lg hover:scale-105 transition-all hover:animate-ripple-wave rounded-lg flex-1"
+              className="px-4 py-5 text-sm md:text-base hover:scale-105 transition-all hover:animate-ripple-wave rounded-lg flex-1"
             >
-              <Icon name="Users" className="mr-2" size={20} />
+              <Icon name="Users" className="mr-2" size={18} />
               Групповые для взрослых
             </Button>
             <Button
               variant={selectedAudience === 'individual' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('individual')}
-              className="px-6 py-6 text-base md:text-lg hover:scale-105 transition-all hover:animate-ripple-wave rounded-lg flex-1"
+              className="px-4 py-5 text-sm md:text-base hover:scale-105 transition-all hover:animate-ripple-wave rounded-lg flex-1"
             >
-              <Icon name="User" className="mr-2" size={20} />
+              <Icon name="User" className="mr-2" size={18} />
               Индивидуальные
             </Button>
           </div>
