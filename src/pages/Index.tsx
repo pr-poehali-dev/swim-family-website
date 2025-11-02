@@ -204,10 +204,10 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="flex justify-center px-4">
+          <div className="text-center">
             <Button 
               size="lg" 
-              className="text-lg px-12 py-6 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all duration-300 shadow-xl w-full max-w-md rounded-lg"
+              className="text-lg px-12 py-6 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all duration-300 shadow-xl min-w-[300px] rounded-lg"
               asChild
             >
               <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20узнать%20подробнее%20о%20вашей%20методике%20плавания" target="_blank" rel="noopener noreferrer">
@@ -293,33 +293,33 @@ const Index = () => {
             Инвестируйте в себя: Выберите свой абонемент!
           </h2>
 
-          <div className="flex flex-col md:flex-row justify-center gap-3 mb-12 items-stretch max-w-5xl mx-auto">
+          <div className="flex justify-center gap-4 mb-12 flex-wrap">
             <Button
               variant={selectedAudience === 'kids' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('kids')}
-              className="px-4 py-5 text-sm md:text-base hover:scale-105 transition-all hover:animate-ripple-wave rounded-lg flex-1"
+              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave min-w-[280px] rounded-lg"
             >
-              <Icon name="Baby" className="mr-2" size={18} />
-              Групповые для детей
+              <Icon name="Baby" className="mr-2" size={20} />
+              Групповые занятия для детей
             </Button>
             <Button
               variant={selectedAudience === 'adults' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('adults')}
-              className="px-4 py-5 text-sm md:text-base hover:scale-105 transition-all hover:animate-ripple-wave rounded-lg flex-1"
+              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave min-w-[280px] rounded-lg"
             >
-              <Icon name="Users" className="mr-2" size={18} />
-              Групповые для взрослых
+              <Icon name="Users" className="mr-2" size={20} />
+              Групповые занятия для взрослых
             </Button>
             <Button
               variant={selectedAudience === 'individual' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('individual')}
-              className="px-4 py-5 text-sm md:text-base hover:scale-105 transition-all hover:animate-ripple-wave rounded-lg flex-1"
+              className="px-8 py-6 text-lg hover:scale-105 transition-all hover:animate-ripple-wave min-w-[280px] rounded-lg"
             >
-              <Icon name="User" className="mr-2" size={18} />
-              Индивидуальные
+              <Icon name="User" className="mr-2" size={20} />
+              Индивидуальные занятия
             </Button>
           </div>
 
