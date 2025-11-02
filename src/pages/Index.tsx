@@ -388,11 +388,11 @@ const Index = () => {
           <div className="text-center">
             <Button
               size="lg"
-              className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-110 transition-all shadow-2xl"
+              className="text-xs md:text-lg px-4 md:px-8 py-4 md:py-6 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-105 transition-all shadow-2xl"
               asChild
             >
               <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20начать%20плыть%20к%20мечте" target="_blank" rel="noopener noreferrer">
-                ВЫБРАТЬ АБОНЕМЕНТ И НАЧАТЬ ПЛЫТЬ К МЕЧТЕ!
+                <span className="text-center leading-tight">ВЫБРАТЬ АБОНЕМЕНТ</span>
               </a>
             </Button>
           </div>
@@ -428,11 +428,11 @@ const Index = () => {
           <div className="text-center">
             <Button
               size="lg"
-              className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-110 transition-all shadow-2xl"
+              className="text-xs md:text-lg px-4 md:px-8 py-4 md:py-6 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-105 transition-all shadow-2xl"
               asChild
             >
               <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20попасть%20на%20занятие%20со%20скидкой%2050%25" target="_blank" rel="noopener noreferrer">
-                ПОПАСТЬ НА ЗАНЯТИЕ СО СКИДКОЙ 50% И НАЧАТЬ СВОЮ ИСТОРИЮ УСПЕХА!
+                <span className="text-center leading-tight">ПОПАСТЬ НА ЗАНЯТИЕ СО СКИДКОЙ 50%</span>
               </a>
             </Button>
             <p className="text-sm text-foreground/60 mt-4">
