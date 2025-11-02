@@ -137,7 +137,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
-            Плаваем на результат и удовольствие от процесса!
+            Плаваем на результат и получаем удовольствие от процесса!
           </h2>
           
           <p className="text-lg md:text-xl text-center mb-12 max-w-4xl mx-auto text-foreground/80 leading-relaxed">
