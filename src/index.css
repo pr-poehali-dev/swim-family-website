@@ -150,10 +150,10 @@
 
   @keyframes marquee-slow {
     0% {
-      transform: translateX(5%);
+      transform: translateX(100%);
     }
     100% {
-      transform: translateX(-5%);
+      transform: translateX(-100%);
     }
   }
 
@@ -215,7 +215,7 @@
   }
 
   .animate-marquee-slow {
-    animation: marquee-slow 20s linear infinite;
+    animation: marquee-slow 15s linear infinite;
   }
 
   .animate-pulse-slow {

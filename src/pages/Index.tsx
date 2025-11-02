@@ -103,9 +103,9 @@ const Index = () => {
               Помогли 450+ ученикам за 6 лет!
             </Badge>
             
-            <div className="mb-8 overflow-hidden py-2">
+            <div className="mb-8 overflow-hidden py-2 w-full">
               <div className="inline-block bg-gradient-to-r from-destructive via-orange-500 to-destructive text-white px-8 py-3 text-base md:text-lg font-bold animate-marquee-slow whitespace-nowrap shadow-xl rounded-full">
-                ИДЕТ НАБОР НА НОЯБРЬ
+                🔥 ИДЕТ НАБОР НА НОЯБРЬ — СПЕШИТЕ, МЕСТА ОГРАНИЧЕНЫ! 🔥
               </div>
             </div>
             
