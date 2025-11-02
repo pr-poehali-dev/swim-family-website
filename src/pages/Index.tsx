@@ -105,7 +105,7 @@ const Index = () => {
             
             <div className="mb-8 overflow-hidden py-2 w-full">
               <div className="inline-block bg-gradient-to-r from-destructive via-orange-500 to-destructive text-white px-8 py-3 text-base md:text-lg font-bold animate-marquee-slow whitespace-nowrap shadow-xl rounded-full">
-                🔥 ИДЕТ НАБОР НА НОЯБРЬ — СПЕШИТЕ, МЕСТА ОГРАНИЧЕНЫ! 🔥
+                🔥 ИДЕТ НАБОР НА НОЯБРЬ 🔥
               </div>
             </div>
             
