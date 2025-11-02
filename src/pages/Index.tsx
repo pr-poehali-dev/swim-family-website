@@ -26,27 +26,7 @@ const Index = () => {
     ],
   };
 
-  const trainers = [
-    {
-      name: 'Очагов Антон Владиславович',
-      role: 'Главный тренер, основатель методики',
-      experience: 'Стаж 10 лет, КМС по плаванию',
-      achievements: 'Подготовил 15+ спортсменов-разрядников',
-      philosophy: 'Моя миссия — не просто научить технике, а показать, что вода — это источник силы и радости',
-      specialization: 'Работа с аквафобией, постановка техники с нуля',
-      phone: '89169455813',
-      image: 'https://cdn.poehali.dev/files/2f7ae86d-58ab-4ebd-b63f-10d843a91c08.JPG',
-    },
-    {
-      name: 'Амирханов Артем',
-      role: 'Тренер-методист',
-      experience: 'Стаж 5 лет, спортивный разряд',
-      achievements: 'Успешно работает с детьми от 4 лет',
-      philosophy: 'Я верю, что каждый может плавать красиво и легко. Моя задача — найти индивидуальный подход к каждому',
-      specialization: 'Детское плавание, коррекция техники',
-      image: 'https://cdn.poehali.dev/projects/2b714740-d40e-4ef4-b8ae-4db5d5a39d93/files/14a07152-a0a5-432a-90e4-e17688275bb4.jpg',
-    },
-  ];
+
 
   const pools = [
     {
@@ -91,17 +71,13 @@ const Index = () => {
     <div className="min-h-screen">
       <section 
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `url('https://cdn.poehali.dev/projects/2b714740-d40e-4ef4-b8ae-4db5d5a39d93/files/b4a07ed4-f3f3-4861-97e1-a969684f7524.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="https://cdn.poehali.dev/files/pool-water-background.mp4" type="video/mp4" />
-        </video>
-        
         <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary/40 to-background/95" />
 
         <div className="relative z-10 container mx-auto px-4 py-20 text-center">
@@ -456,60 +432,6 @@ const Index = () => {
       </section>
 
       <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-primary">
-            Наши Тренеры
-          </h2>
-          <p className="text-lg text-center mb-12 text-foreground/70 max-w-2xl mx-auto">
-            Профессионалы с огромным опытом и искренней любовью к своему делу
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {trainers.map((trainer, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 border-primary/20">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={trainer.image}
-                    alt={trainer.name}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-primary">{trainer.name}</h3>
-                  <p className="text-accent font-semibold mb-4">{trainer.role}</p>
-                  <div className="space-y-3 text-foreground/80">
-                    <p className="flex items-start gap-2">
-                      <Icon name="Award" size={20} className="text-primary flex-shrink-0 mt-1" />
-                      <span>{trainer.experience}</span>
-                    </p>
-                    <p className="flex items-start gap-2">
-                      <Icon name="Trophy" size={20} className="text-primary flex-shrink-0 mt-1" />
-                      <span>{trainer.achievements}</span>
-                    </p>
-                    <p className="flex items-start gap-2">
-                      <Icon name="Target" size={20} className="text-primary flex-shrink-0 mt-1" />
-                      <span>{trainer.specialization}</span>
-                    </p>
-                    <p className="italic text-foreground/70 border-l-4 border-primary pl-4 mt-4">
-                      "{trainer.philosophy}"
-                    </p>
-                  </div>
-                  {trainer.phone && (
-                    <Button className="w-full mt-6 bg-gradient-to-r from-primary to-accent text-white" asChild>
-                      <a href={`tel:+${trainer.phone}`}>
-                        <Icon name="Phone" className="mr-2" size={18} />
-                        Позвонить тренеру
-                      </a>
-                    </Button>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 bg-gradient-to-b from-secondary/20 to-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-primary">
             Что говорят те, кто уже выбрал Swim Family?
