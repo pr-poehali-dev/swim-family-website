@@ -304,7 +304,6 @@ export default function SwimLevelTest() {
                   asChild
                 >
                   <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Прошёл%20тест%20и%20хочу%20записаться%20на%20занятие" target="_blank" rel="noopener noreferrer">
-                    <Icon name="MessageCircle" className="mr-1 md:mr-2 flex-shrink-0" size={18} />
                     <span className="whitespace-nowrap">Записаться на занятие</span>
                   </a>
                 </Button>
@@ -314,7 +313,6 @@ export default function SwimLevelTest() {
                   onClick={resetTest}
                   className="flex-1 border-2 border-primary text-primary hover:bg-primary hover:text-white py-4 md:py-6 text-sm md:text-lg"
                 >
-                  <Icon name="RotateCcw" className="mr-1 md:mr-2 flex-shrink-0" size={18} />
                   <span className="whitespace-nowrap">Пройти ещё раз</span>
                 </Button>
               </div>
