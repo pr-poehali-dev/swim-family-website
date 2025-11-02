@@ -174,10 +174,10 @@ export default function SwimLevelTest() {
           <Button
             size="lg"
             onClick={() => setIsOpen(true)}
-            className="bg-primary text-white hover:bg-primary/90 px-8 py-6 text-lg shadow-lg hover:scale-105 transition-all"
+            className="bg-primary text-white hover:bg-primary/90 px-4 md:px-8 py-4 md:py-6 text-sm md:text-lg shadow-lg hover:scale-105 transition-all"
           >
-            <Icon name="FileQuestion" className="mr-2" size={20} />
-            Пройти тест и получить программу!
+            <Icon name="FileQuestion" className="mr-1 md:mr-2 flex-shrink-0" size={18} />
+            <span className="whitespace-nowrap">Пройти тест и получить программу!</span>
           </Button>
         </CardContent>
       </Card>
@@ -222,13 +222,13 @@ export default function SwimLevelTest() {
                     key={index}
                     onClick={() => handleAnswer(option.points)}
                     variant="outline"
-                    className="w-full p-6 text-left justify-start hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 border-2 text-base"
+                    className="w-full p-4 md:p-6 text-left justify-start hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 border-2 text-sm md:text-base"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 font-bold">
+                    <div className="flex items-center gap-2 md:gap-3">
+                      <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 font-bold text-xs md:text-base">
                         {String.fromCharCode(65 + index)}
                       </div>
-                      <span>{option.text}</span>
+                      <span className="leading-tight">{option.text}</span>
                     </div>
                   </Button>
                 ))}
@@ -300,22 +300,22 @@ export default function SwimLevelTest() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button
                   size="lg"
-                  className="flex-1 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all py-6 text-lg"
+                  className="flex-1 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all py-4 md:py-6 text-sm md:text-lg"
                   asChild
                 >
                   <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Прошёл%20тест%20и%20хочу%20записаться%20на%20занятие" target="_blank" rel="noopener noreferrer">
-                    <Icon name="MessageCircle" className="mr-2" size={20} />
-                    Записаться на занятие
+                    <Icon name="MessageCircle" className="mr-1 md:mr-2 flex-shrink-0" size={18} />
+                    <span className="whitespace-nowrap">Записаться на занятие</span>
                   </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   onClick={resetTest}
-                  className="flex-1 border-2 border-primary text-primary hover:bg-primary hover:text-white py-6 text-lg"
+                  className="flex-1 border-2 border-primary text-primary hover:bg-primary hover:text-white py-4 md:py-6 text-sm md:text-lg"
                 >
-                  <Icon name="RotateCcw" className="mr-2" size={20} />
-                  Пройти ещё раз
+                  <Icon name="RotateCcw" className="mr-1 md:mr-2 flex-shrink-0" size={18} />
+                  <span className="whitespace-nowrap">Пройти ещё раз</span>
                 </Button>
               </div>
             </>

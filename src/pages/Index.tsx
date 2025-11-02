@@ -204,15 +204,15 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="flex justify-center">
             <Button 
               size="lg" 
-              className="text-lg px-12 py-6 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all duration-300 shadow-xl min-w-[300px] rounded-lg"
+              className="text-xs md:text-lg px-3 md:px-12 py-4 md:py-6 bg-gradient-to-r from-primary to-accent text-white hover:scale-105 transition-all duration-300 shadow-xl rounded-lg"
               asChild
             >
               <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20узнать%20подробнее%20о%20вашей%20методике%20плавания" target="_blank" rel="noopener noreferrer">
-                <Icon name="MessageCircle" className="mr-2" size={20} />
-                Узнать о нашей методике подробнее!
+                <Icon name="MessageCircle" className="mr-1 md:mr-2 flex-shrink-0" size={16} />
+                <span className="whitespace-nowrap">Узнать о нашей методике подробнее!</span>
               </a>
             </Button>
           </div>
