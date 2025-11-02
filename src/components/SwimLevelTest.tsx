@@ -164,7 +164,6 @@ export default function SwimLevelTest() {
     return (
       <Card className="max-w-3xl mx-auto bg-gradient-to-br from-primary/5 to-accent/10 border-2 border-primary/30 shadow-xl hover:shadow-2xl transition-all">
         <CardContent className="p-8 md:p-10 text-center">
-          <Icon name="Sparkles" size={48} className="text-primary mx-auto mb-4" />
           <h3 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
             Узнайте свой уровень плавания за 1 минуту!
           </h3>
@@ -176,7 +175,6 @@ export default function SwimLevelTest() {
             onClick={() => setIsOpen(true)}
             className="bg-primary text-white hover:bg-primary/90 px-4 md:px-8 py-4 md:py-6 text-sm md:text-lg shadow-lg hover:scale-105 transition-all"
           >
-            <Icon name="FileQuestion" className="mr-1 md:mr-2 flex-shrink-0" size={18} />
             <span className="whitespace-nowrap">Пройти тест и получить программу!</span>
           </Button>
         </CardContent>
@@ -218,19 +216,20 @@ export default function SwimLevelTest() {
 
               <div className="space-y-3">
                 {questions[currentQuestion].options.map((option, index) => (
-                  <Button
+                  <Card
                     key={index}
                     onClick={() => handleAnswer(option.points)}
-                    variant="outline"
-                    className="w-full p-4 md:p-6 text-left justify-start hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 border-2 text-sm md:text-base"
+                    className="cursor-pointer hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 border-2 border-primary/20 hover:border-primary"
                   >
-                    <div className="flex items-center gap-2 md:gap-3">
-                      <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 font-bold text-xs md:text-base">
-                        {String.fromCharCode(65 + index)}
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex items-center gap-2 md:gap-3">
+                        <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 font-bold text-xs md:text-base">
+                          {String.fromCharCode(65 + index)}
+                        </div>
+                        <span className="leading-tight text-sm md:text-base">{option.text}</span>
                       </div>
-                      <span className="leading-tight">{option.text}</span>
-                    </div>
-                  </Button>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
             </div>
