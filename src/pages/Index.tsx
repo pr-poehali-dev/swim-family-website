@@ -111,16 +111,12 @@ const Index = () => {
             
             <Button 
               size="lg" 
-              className="text-xs md:text-xl px-3 md:px-12 py-4 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-105 transition-all duration-300 shadow-2xl group relative overflow-hidden font-bold rounded-lg"
+              className="text-xs md:text-lg px-3 md:px-10 py-4 md:py-6 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-105 transition-all duration-300 shadow-2xl font-bold rounded-lg"
               asChild
             >
               <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20записаться%20на%20пробную%20тренировку%20со%20скидкой%2050%25" target="_blank" rel="noopener noreferrer">
-                <span className="relative z-10 flex items-center justify-center gap-1 md:gap-2">
-                  <Icon name="Waves" size={16} className="md:w-6 md:h-6 flex-shrink-0" />
-                  <span className="text-center leading-tight">ЗАПИСАТЬСЯ НА ПРОБНУЮ ТРЕНИРОВКУ СО СКИДКОЙ 50%</span>
-                </span>
-                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="absolute inset-0 animate-ripple-wave bg-white/20 rounded-lg" />
+                <span className="flex items-center justify-center gap-1 md:gap-2">
+                  <span className="text-center leading-tight">ЗАПИСАТЬСЯ СО СКИДКОЙ 50%</span>
                 </span>
               </a>
             </Button>
