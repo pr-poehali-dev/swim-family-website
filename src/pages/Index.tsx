@@ -90,11 +90,11 @@ const Index = () => {
           </div>
 
           <div className="animate-fade-in">
-            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-2xl hover:animate-water-ripple transition-all duration-300 cursor-default leading-tight px-2">
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-2xl hover:animate-water-ripple transition-all duration-300 cursor-default leading-tight">
               Школа плавания Swim Family - больше, чем просто уроки плавания
             </h1>
             
-            <h2 className="text-lg md:text-2xl lg:text-3xl mb-8 text-white/95 font-semibold drop-shadow-lg max-w-4xl mx-auto px-2">
+            <h2 className="text-lg md:text-2xl lg:text-3xl mb-8 text-white/95 font-semibold drop-shadow-lg max-w-4xl mx-auto">
               От полного новичка до уверенного пловца всего за 10 занятий по нашей авторской методике. Гарантия результата!
             </h2>
             
@@ -109,23 +109,21 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="px-4 w-full max-w-2xl mx-auto">
-              <Button 
-                size="lg" 
-                className="text-sm md:text-xl px-6 md:px-12 py-5 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-105 transition-all duration-300 shadow-2xl group relative overflow-hidden font-bold w-full rounded-lg"
-                asChild
-              >
-                <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20записаться%20на%20пробную%20тренировку%20со%20скидкой%2050%25" target="_blank" rel="noopener noreferrer">
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    <Icon name="Waves" size={20} />
-                    <span className="text-center">ЗАПИСАТЬСЯ НА ПРОБНУЮ ТРЕНИРОВКУ СО СКИДКОЙ 50%</span>
-                  </span>
-                  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="absolute inset-0 animate-ripple-wave bg-white/20 rounded-lg" />
-                  </span>
-                </a>
-              </Button>
-            </div>
+            <Button 
+              size="lg" 
+              className="text-xs md:text-xl px-3 md:px-12 py-4 md:py-8 bg-gradient-to-r from-orange-500 to-destructive text-white hover:scale-105 transition-all duration-300 shadow-2xl group relative overflow-hidden font-bold rounded-lg"
+              asChild
+            >
+              <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20записаться%20на%20пробную%20тренировку%20со%20скидкой%2050%25" target="_blank" rel="noopener noreferrer">
+                <span className="relative z-10 flex items-center justify-center gap-1 md:gap-2">
+                  <Icon name="Waves" size={16} className="md:w-6 md:h-6 flex-shrink-0" />
+                  <span className="text-center leading-tight">ЗАПИСАТЬСЯ НА ПРОБНУЮ ТРЕНИРОВКУ СО СКИДКОЙ 50%</span>
+                </span>
+                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="absolute inset-0 animate-ripple-wave bg-white/20 rounded-lg" />
+                </span>
+              </a>
+            </Button>
           </div>
         </div>
 
@@ -142,7 +140,7 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary px-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
             Плаваем на результат и удовольствие от процесса!
           </h2>
           
@@ -229,7 +227,7 @@ const Index = () => {
 
       <section id="principles" className="py-16 md:py-24 bg-gradient-to-b from-secondary/20 to-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-12 max-w-4xl mx-auto text-primary px-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-12 max-w-4xl mx-auto text-primary">
             Наша школа — это не просто бассейн, это сообщество, где каждый чувствует себя особенным:
           </h2>
 
@@ -291,37 +289,37 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary px-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-primary">
             Инвестируйте в себя: Выберите свой абонемент!
           </h2>
 
-          <div className="flex flex-col md:flex-row justify-center gap-3 mb-12 max-w-4xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-center gap-3 mb-12 max-w-5xl mx-auto">
             <Button
               variant={selectedAudience === 'kids' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('kids')}
-              className="px-4 py-4 text-sm md:text-base hover:scale-105 transition-all rounded-lg flex-1 whitespace-nowrap"
+              className="px-3 py-4 text-xs md:text-base hover:scale-105 transition-all rounded-lg flex-1"
             >
-              <Icon name="Baby" className="mr-2" size={18} />
-              Групповые для детей
+              <Icon name="Baby" className="mr-1 md:mr-2 flex-shrink-0" size={16} />
+              <span className="whitespace-nowrap">Групповые для детей</span>
             </Button>
             <Button
               variant={selectedAudience === 'adults' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('adults')}
-              className="px-4 py-4 text-sm md:text-base hover:scale-105 transition-all rounded-lg flex-1 whitespace-nowrap"
+              className="px-3 py-4 text-xs md:text-base hover:scale-105 transition-all rounded-lg flex-1"
             >
-              <Icon name="Users" className="mr-2" size={18} />
-              Групповые для взрослых
+              <Icon name="Users" className="mr-1 md:mr-2 flex-shrink-0" size={16} />
+              <span className="whitespace-nowrap">Групповые для взрослых</span>
             </Button>
             <Button
               variant={selectedAudience === 'individual' ? 'default' : 'outline'}
               size="lg"
               onClick={() => setSelectedAudience('individual')}
-              className="px-4 py-4 text-sm md:text-base hover:scale-105 transition-all rounded-lg flex-1 whitespace-nowrap"
+              className="px-3 py-4 text-xs md:text-base hover:scale-105 transition-all rounded-lg flex-1"
             >
-              <Icon name="User" className="mr-2" size={18} />
-              Индивидуальные
+              <Icon name="User" className="mr-1 md:mr-2 flex-shrink-0" size={16} />
+              <span className="whitespace-nowrap">Индивидуальные</span>
             </Button>
           </div>
 
