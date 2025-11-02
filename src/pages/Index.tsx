@@ -392,7 +392,6 @@ const Index = () => {
               asChild
             >
               <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20начать%20плыть%20к%20мечте" target="_blank" rel="noopener noreferrer">
-                <Icon name="Waves" className="mr-2" size={24} />
                 ВЫБРАТЬ АБОНЕМЕНТ И НАЧАТЬ ПЛЫТЬ К МЕЧТЕ!
               </a>
             </Button>
@@ -433,7 +432,6 @@ const Index = () => {
               asChild
             >
               <a href="https://api.whatsapp.com/send?phone=79169455813&text=Здравствуйте!%20Хочу%20попасть%20на%20занятие%20со%20скидкой%2050%25" target="_blank" rel="noopener noreferrer">
-                <Icon name="Star" className="mr-2" size={24} />
                 ПОПАСТЬ НА ЗАНЯТИЕ СО СКИДКОЙ 50% И НАЧАТЬ СВОЮ ИСТОРИЮ УСПЕХА!
               </a>
             </Button>
