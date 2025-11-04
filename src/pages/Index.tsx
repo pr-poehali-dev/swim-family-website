@@ -8,6 +8,15 @@ import SwimLevelTest from '@/components/SwimLevelTest';
 const Index = () => {
   const [selectedAudience, setSelectedAudience] = useState<'kids' | 'adults' | 'individual'>('kids');
 
+  const getPluralForm = (number: number): string => {
+    const n = Math.abs(number) % 100;
+    const n1 = n % 10;
+    if (n > 10 && n < 20) return 'занятий';
+    if (n1 > 1 && n1 < 5) return 'занятия';
+    if (n1 === 1) return 'занятие';
+    return 'занятий';
+  };
+
   const prices = {
     kids: [
       { name: 'Старт', sessions: 4, price: 4200, perSession: 1050, savings: null, popular: false },
@@ -339,7 +348,7 @@ const Index = () => {
                       {plan.price.toLocaleString()} ₽
                     </div>
                     <div className="text-sm text-foreground/60">
-                      {plan.sessions} {plan.sessions === 1 ? 'занятие' : 'занятия'}
+                      {plan.sessions} {getPluralForm(plan.sessions)}
                     </div>
                     <div className="text-lg text-primary font-semibold mt-2">
                       {plan.perSession} ₽ / занятие
